@@ -291,6 +291,7 @@
             Answerbox.Name = "Answerbox";
             Answerbox.Size = new Size(321, 41);
             Answerbox.TabIndex = 21;
+            Answerbox.SelectedIndexChanged += Answerbox_SelectedIndexChanged;
             // 
             // Inputbox
             // 
@@ -340,7 +341,8 @@
             Controls.Add(Titlelbl);
             Controls.Add(panel1);
             Name = "Calculator";
-            Text = "Form1";
+            Text = "SimpleCalculator";
+            Load += Calculator_Load;
             ResumeLayout(false);
             PerformLayout();
         }
