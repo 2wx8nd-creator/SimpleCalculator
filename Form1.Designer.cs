@@ -51,7 +51,7 @@
             Delbtn = new Button();
             Answerbox = new ListBox();
             Inputbox = new TextBox();
-            panel1 = new Panel();
+            Shadowpnl = new Panel();
             SuspendLayout();
             // 
             // Titlelbl
@@ -69,7 +69,7 @@
             // 
             // Num1btn
             // 
-            Num1btn.Font = new Font("맑은 고딕", 11F);
+            Num1btn.Font = new Font("맑은 고딕", 14F);
             Num1btn.Location = new Point(41, 311);
             Num1btn.Name = "Num1btn";
             Num1btn.Size = new Size(77, 54);
@@ -80,7 +80,7 @@
             // 
             // Num3btn
             // 
-            Num3btn.Font = new Font("맑은 고딕", 11F);
+            Num3btn.Font = new Font("맑은 고딕", 14F);
             Num3btn.Location = new Point(207, 311);
             Num3btn.Name = "Num3btn";
             Num3btn.Size = new Size(77, 54);
@@ -91,7 +91,7 @@
             // 
             // Num2btn
             // 
-            Num2btn.Font = new Font("맑은 고딕", 11F);
+            Num2btn.Font = new Font("맑은 고딕", 14F);
             Num2btn.Location = new Point(124, 311);
             Num2btn.Name = "Num2btn";
             Num2btn.Size = new Size(77, 54);
@@ -102,7 +102,7 @@
             // 
             // Num4btn
             // 
-            Num4btn.Font = new Font("맑은 고딕", 11F);
+            Num4btn.Font = new Font("맑은 고딕", 14F);
             Num4btn.Location = new Point(41, 371);
             Num4btn.Name = "Num4btn";
             Num4btn.Size = new Size(77, 54);
@@ -113,7 +113,7 @@
             // 
             // Num5btn
             // 
-            Num5btn.Font = new Font("맑은 고딕", 11F);
+            Num5btn.Font = new Font("맑은 고딕", 14F);
             Num5btn.Location = new Point(124, 371);
             Num5btn.Name = "Num5btn";
             Num5btn.Size = new Size(77, 54);
@@ -124,7 +124,7 @@
             // 
             // Num6btn
             // 
-            Num6btn.Font = new Font("맑은 고딕", 11F);
+            Num6btn.Font = new Font("맑은 고딕", 14F);
             Num6btn.Location = new Point(207, 371);
             Num6btn.Name = "Num6btn";
             Num6btn.Size = new Size(77, 54);
@@ -135,7 +135,7 @@
             // 
             // Num9btn
             // 
-            Num9btn.Font = new Font("맑은 고딕", 11F);
+            Num9btn.Font = new Font("맑은 고딕", 14F);
             Num9btn.Location = new Point(207, 431);
             Num9btn.Name = "Num9btn";
             Num9btn.Size = new Size(77, 54);
@@ -146,7 +146,7 @@
             // 
             // Num8btn
             // 
-            Num8btn.Font = new Font("맑은 고딕", 11F);
+            Num8btn.Font = new Font("맑은 고딕", 14F);
             Num8btn.Location = new Point(124, 431);
             Num8btn.Name = "Num8btn";
             Num8btn.Size = new Size(77, 54);
@@ -157,14 +157,14 @@
             // 
             // Num7btn
             // 
-            Num7btn.Font = new Font("맑은 고딕", 11F);
+            Num7btn.Font = new Font("맑은 고딕", 14F);
             Num7btn.Location = new Point(41, 431);
             Num7btn.Name = "Num7btn";
             Num7btn.Size = new Size(77, 54);
             Num7btn.TabIndex = 9;
             Num7btn.Text = "7";
             Num7btn.UseVisualStyleBackColor = true;
-            Num7btn.Click += button8_Click;
+            Num7btn.Click += Num7btn_Click;
             // 
             // Dotbtn
             // 
@@ -175,21 +175,22 @@
             Dotbtn.TabIndex = 10;
             Dotbtn.Text = ".";
             Dotbtn.UseVisualStyleBackColor = true;
-            Dotbtn.Click += button9_Click;
+            Dotbtn.Click += Dotbtn_Click;
             // 
             // Num0btn
             // 
-            Num0btn.Font = new Font("맑은 고딕", 11F);
+            Num0btn.Font = new Font("맑은 고딕", 14F);
             Num0btn.Location = new Point(124, 491);
             Num0btn.Name = "Num0btn";
             Num0btn.Size = new Size(77, 54);
             Num0btn.TabIndex = 11;
             Num0btn.Text = "0";
             Num0btn.UseVisualStyleBackColor = true;
+            Num0btn.Click += Num0btn_Click;
             // 
             // PlusMinusbtn
             // 
-            PlusMinusbtn.Font = new Font("Microsoft Sans Serif", 8.25F);
+            PlusMinusbtn.Font = new Font("Microsoft Sans Serif", 14F);
             PlusMinusbtn.Location = new Point(41, 491);
             PlusMinusbtn.Name = "PlusMinusbtn";
             PlusMinusbtn.Size = new Size(77, 54);
@@ -255,6 +256,7 @@
             // 
             // CEbtn
             // 
+            CEbtn.Font = new Font("맑은 고딕", 14F);
             CEbtn.Location = new Point(41, 251);
             CEbtn.Name = "CEbtn";
             CEbtn.Size = new Size(77, 54);
@@ -265,6 +267,7 @@
             // 
             // Cbtn
             // 
+            Cbtn.Font = new Font("맑은 고딕", 14F);
             Cbtn.Location = new Point(124, 251);
             Cbtn.Name = "Cbtn";
             Cbtn.Size = new Size(77, 54);
@@ -275,6 +278,7 @@
             // 
             // Delbtn
             // 
+            Delbtn.Font = new Font("맑은 고딕", 14F);
             Delbtn.Location = new Point(207, 251);
             Delbtn.Name = "Delbtn";
             Delbtn.Size = new Size(77, 54);
@@ -295,7 +299,7 @@
             // 
             // Inputbox
             // 
-            Inputbox.Font = new Font("맑은 고딕", 10F);
+            Inputbox.Font = new Font("맑은 고딕", 18F);
             Inputbox.Location = new Point(41, 110);
             Inputbox.Multiline = true;
             Inputbox.Name = "Inputbox";
@@ -303,12 +307,12 @@
             Inputbox.TabIndex = 22;
             Inputbox.TextChanged += Inputbox_TextChanged;
             // 
-            // panel1
+            // Shadowpnl
             // 
-            panel1.Location = new Point(41, 26);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(323, 56);
-            panel1.TabIndex = 23;
+            Shadowpnl.Location = new Point(41, 26);
+            Shadowpnl.Name = "Shadowpnl";
+            Shadowpnl.Size = new Size(323, 56);
+            Shadowpnl.TabIndex = 23;
             // 
             // Calculator
             // 
@@ -339,7 +343,7 @@
             Controls.Add(Num3btn);
             Controls.Add(Num1btn);
             Controls.Add(Titlelbl);
-            Controls.Add(panel1);
+            Controls.Add(Shadowpnl);
             Name = "Calculator";
             Text = "SimpleCalculator";
             Load += Calculator_Load;
@@ -372,6 +376,6 @@
         private Button Delbtn;
         private ListBox Answerbox;
         private TextBox Inputbox;
-        private Panel panel1;
+        private Panel Shadowpnl;
     }
 }
