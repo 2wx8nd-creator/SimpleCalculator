@@ -12,9 +12,6 @@ namespace SimpleCalculator
         {
             InitializeComponent();
 
-            this.ActiveControl = Inputbox;
-            Inputbox.Focus();
-
             Inputbox.KeyDown += Inputbox_KeyDown;
             Inputbox.KeyPress += Inputbox_KeyPress;
         }
@@ -34,15 +31,9 @@ namespace SimpleCalculator
         private void Inputbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             char c = e.KeyChar;
-            bool isValid = char.IsDigit(c) ||
-                           "+-*/.()[]{}".Contains(c) ||
-                           c == (char)Keys.Back ||
-                           c == (char)Keys.Enter;
+            bool isValid = char.IsDigit(c) || "+-*/.()[]{}".Contains(c) || c == (char)Keys.Back || c == (char)Keys.Enter;
 
-            if (!isValid)
-            {
-                e.Handled = true;
-            }
+            if (!isValid) e.Handled = true;
         }
 
         private void Inputbox_KeyDown(object sender, KeyEventArgs e)
@@ -52,10 +43,6 @@ namespace SimpleCalculator
                 e.SuppressKeyPress = true;
                 Equalbtn.PerformClick();
             }
-            else if (e.KeyCode == Keys.Back && string.IsNullOrEmpty(Inputbox.Text))
-            {
-                Delbtn.PerformClick();
-            }
         }
 
         private void Answerbox_SelectedIndexChanged(object sender, EventArgs e) { }
@@ -64,7 +51,6 @@ namespace SimpleCalculator
         {
             Inputbox.Text += value;
             Inputbox.SelectionStart = Inputbox.Text.Length;
-            Inputbox.Focus();
         }
 
         private void Num1btn_Click(object sender, EventArgs e) => AddToInput("1");
@@ -97,7 +83,6 @@ namespace SimpleCalculator
 
             int lastSpace = text.LastIndexOf(' ');
             Inputbox.Text = lastSpace != -1 ? text.Substring(0, lastSpace + 1) : "";
-            Inputbox.Focus();
         }
 
         private void Delbtn_Click(object sender, EventArgs e)
@@ -106,7 +91,6 @@ namespace SimpleCalculator
                 Inputbox.Text = Inputbox.Text.Remove(Inputbox.Text.Length - 1);
 
             if (Answerbox.Items.Count > 0) SetDefaultAnswer();
-            Inputbox.Focus();
         }
 
         private void PlusMinusbtn_Click(object sender, EventArgs e)
@@ -132,7 +116,6 @@ namespace SimpleCalculator
                 else
                     Inputbox.Text = baseText + (string.IsNullOrEmpty(op) ? "" : $" {op} ") + $"(-{number})";
             }
-            Inputbox.Focus();
         }
 
         private void Equalbtn_Click(object sender, EventArgs e)
@@ -150,7 +133,6 @@ namespace SimpleCalculator
                 Answerbox.Items.Add(result.ToString());
             }
             catch { MessageBox.Show("수식이 올바르지 않습니다."); }
-            Inputbox.Focus();
         }
 
         private void Inputbox_TextChanged(object sender, EventArgs e) { }
