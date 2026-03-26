@@ -74,6 +74,7 @@
             Num1btn.TabIndex = 1;
             Num1btn.Text = "1";
             Num1btn.UseVisualStyleBackColor = true;
+            Num1btn.Click += Num1btn_Click;
             // 
             // Num3btn
             // 
@@ -83,7 +84,7 @@
             Num3btn.TabIndex = 2;
             Num3btn.Text = "3";
             Num3btn.UseVisualStyleBackColor = true;
-            Num3btn.Click += button1_Click;
+            Num3btn.Click += Num3btn_Click;
             // 
             // Num2btn
             // 
@@ -93,6 +94,7 @@
             Num2btn.TabIndex = 3;
             Num2btn.Text = "2";
             Num2btn.UseVisualStyleBackColor = true;
+            Num2btn.Click += Num2btn_Click;
             // 
             // Num4btn
             // 
@@ -102,6 +104,7 @@
             Num4btn.TabIndex = 4;
             Num4btn.Text = "4";
             Num4btn.UseVisualStyleBackColor = true;
+            Num4btn.Click += Num4btn_Click;
             // 
             // Num5btn
             // 
@@ -131,6 +134,7 @@
             Num9btn.TabIndex = 7;
             Num9btn.Text = "9";
             Num9btn.UseVisualStyleBackColor = true;
+            Num9btn.Click += Num9btn_Click;
             // 
             // Num8btn
             // 
@@ -140,6 +144,7 @@
             Num8btn.TabIndex = 8;
             Num8btn.Text = "8";
             Num8btn.UseVisualStyleBackColor = true;
+            Num8btn.Click += Num8btn_Click;
             // 
             // Num7btn
             // 
@@ -179,6 +184,7 @@
             PlusMinusbtn.TabIndex = 12;
             PlusMinusbtn.Text = "+/-";
             PlusMinusbtn.UseVisualStyleBackColor = true;
+            PlusMinusbtn.Click += PlusMinusbtn_Click;
             // 
             // Equalbtn
             // 
@@ -188,6 +194,7 @@
             Equalbtn.TabIndex = 16;
             Equalbtn.Text = "=";
             Equalbtn.UseVisualStyleBackColor = true;
+            Equalbtn.Click += Equalbtn_Click;
             // 
             // Plusbtn
             // 
@@ -197,6 +204,7 @@
             Plusbtn.TabIndex = 15;
             Plusbtn.Text = "+";
             Plusbtn.UseVisualStyleBackColor = true;
+            Plusbtn.Click += Plusbtn_Click;
             // 
             // Minusbtn
             // 
@@ -206,6 +214,7 @@
             Minusbtn.TabIndex = 14;
             Minusbtn.Text = "-";
             Minusbtn.UseVisualStyleBackColor = true;
+            Minusbtn.Click += Minusbtn_Click;
             // 
             // Mulbtn
             // 
@@ -215,6 +224,7 @@
             Mulbtn.TabIndex = 13;
             Mulbtn.Text = "×";
             Mulbtn.UseVisualStyleBackColor = true;
+            Mulbtn.Click += Mulbtn_Click;
             // 
             // button5
             // 
@@ -224,6 +234,7 @@
             button5.TabIndex = 20;
             button5.Text = "÷";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += Divbtn_Click;
             // 
             // CEbtn
             // 
@@ -233,6 +244,7 @@
             CEbtn.TabIndex = 19;
             CEbtn.Text = "CE";
             CEbtn.UseVisualStyleBackColor = true;
+            CEbtn.Click += CEbtn_Click;
             // 
             // Cbtn
             // 
@@ -242,6 +254,7 @@
             Cbtn.TabIndex = 18;
             Cbtn.Text = "C";
             Cbtn.UseVisualStyleBackColor = true;
+            Cbtn.Click += Cbtn_Click;
             // 
             // Delbtn
             // 
@@ -251,22 +264,26 @@
             Delbtn.TabIndex = 17;
             Delbtn.Text = "del";
             Delbtn.UseVisualStyleBackColor = true;
+            Delbtn.Click += Delbtn_Click;
             // 
             // Answerbox
             // 
+            Answerbox.Font = new Font("맑은 고딕", 20F);
             Answerbox.FormattingEnabled = true;
             Answerbox.Location = new Point(41, 165);
             Answerbox.Name = "Answerbox";
-            Answerbox.Size = new Size(321, 49);
+            Answerbox.Size = new Size(321, 41);
             Answerbox.TabIndex = 21;
             // 
             // Inputbox
             // 
+            Inputbox.Font = new Font("맑은 고딕", 10F);
             Inputbox.Location = new Point(41, 110);
             Inputbox.Multiline = true;
             Inputbox.Name = "Inputbox";
             Inputbox.Size = new Size(321, 49);
             Inputbox.TabIndex = 22;
+            Inputbox.TextChanged += Inputbox_TextChanged;
             // 
             // Calculator
             // 
